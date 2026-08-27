@@ -8,20 +8,20 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --gold:       #C9A54C;
-      --gold-light: #E8C97A;
-      --gold-deep:  #8F6E1F;                 /* readable gold for small text on light bg */
-      --gold-dim:   rgba(201, 165, 76, 0.35);
-      --purple-deep:#EFEAF7;                 /* light purple section band */
+      --gold:       #5FB4E5;                 /* azure — accent, badges, buttons */
+      --gold-light: #8CCBF0;                 /* lighter azure for hover */
+      --gold-deep:  #194F90;                 /* blue — readable on light bg */
+      --gold-dim:   rgba(95, 180, 229, 0.35);
+      --purple-deep:#EFF7FC;                 /* light azure section band */
       --purple-card:#FFFFFF;                 /* cards */
-      --purple-mid: #E9E3F3;
-      --bg:         #F7F5FB;                 /* page background */
-      --ink:        #2A1650;                 /* deep purple headings */
-      --dark:       #09060F;                 /* dark ink on gold buttons + hero/nav */
+      --purple-mid: #E3F1FA;
+      --bg:         #FFFFFF;                 /* page background */
+      --ink:        #194F90;                 /* blue headings */
+      --dark:       #194F90;                 /* blue text on azure buttons + hero/nav */
       --white:      #FFFFFF;
-      --off-white:  #3D3352;                 /* body text on light theme */
-      --muted:      #6E6486;
-      --border:     rgba(176, 141, 60, 0.4);
+      --off-white:  #194F90;                 /* body text on light theme */
+      --muted:      #5C7A9A;
+      --border:     rgba(95, 180, 229, 0.4);
     }
 
     html { scroll-behavior: smooth; }
@@ -44,7 +44,7 @@
     /* ── NAV ─────────────────────────────────── */
     nav {
       position: sticky; top: 0; z-index: 200;
-      background: rgba(9,6,15,0.96);
+      background: rgba(8,20,35,0.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
       padding: 14px 22px;
@@ -85,7 +85,7 @@
     /* ── HERO ────────────────────────────────── */
     .hero {
       min-height: 90vh;
-      background: linear-gradient(160deg, #0D0520 0%, #130730 45%, #0A0A1A 100%);
+      background: linear-gradient(160deg, #081C33 0%, #0F2E56 45%, #050D18 100%);
       display: flex; align-items: center;
       padding: 100px 22px 80px;
       position: relative; overflow: hidden;
@@ -103,10 +103,10 @@
       position: absolute; inset: 0; z-index: 1;
       background: linear-gradient(
         to right,
-        rgba(9, 6, 15, 0.97) 0%,
-        rgba(9, 6, 15, 0.88) 40%,
-        rgba(9, 6, 15, 0.45) 70%,
-        rgba(9, 6, 15, 0.2) 100%
+        rgba(8, 20, 35, 0.97) 0%,
+        rgba(8, 20, 35, 0.88) 40%,
+        rgba(8, 20, 35, 0.45) 70%,
+        rgba(8, 20, 35, 0.2) 100%
       );
     }
 
@@ -115,8 +115,8 @@
       content: '';
       position: absolute; inset: 0;
       background-image:
-        linear-gradient(rgba(201,165,76,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(201,165,76,0.04) 1px, transparent 1px);
+        linear-gradient(rgba(95,180,229,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(95,180,229,0.05) 1px, transparent 1px);
       background-size: 60px 60px;
       pointer-events: none;
     }
@@ -138,7 +138,7 @@
 
     .hero-body {
       font-family: Arial, sans-serif; font-size: clamp(16px, 2.2vw, 19px);
-      color: #A79DBE; max-width: 560px;
+      color: #A9C8E0; max-width: 560px;
       line-height: 1.65; margin-bottom: 48px;
     }
 
@@ -166,7 +166,7 @@
 
     .hero-note {
       margin-top: 24px;
-      font-family: Arial, sans-serif; font-size: 13px; color: #A79DBE;
+      font-family: Arial, sans-serif; font-size: 13px; color: #A9C8E0;
     }
 
     /* ── DIVIDER ─────────────────────────────── */
@@ -235,7 +235,7 @@
       transform: translate(-50%, -50%);
       z-index: 2;
       width: 60px; height: 60px; border-radius: 50%;
-      background: rgba(201,165,76,0.92);
+      background: rgba(95,180,229,0.92);
       display: flex; align-items: center; justify-content: center;
       transition: background 0.2s, transform 0.15s;
       cursor: pointer;
@@ -285,7 +285,7 @@
     .packages {
       padding: 90px 22px;
       background:
-        radial-gradient(ellipse at 90% 10%, rgba(201,165,76,0.10) 0%, transparent 50%),
+        radial-gradient(ellipse at 90% 10%, rgba(95,180,229,0.10) 0%, transparent 50%),
         var(--bg);
     }
 
@@ -321,7 +321,7 @@
 
     .pkg-wide-right {
       padding: 30px 32px 28px;
-      background: linear-gradient(135deg, rgba(201,165,76,0.07) 0%, rgba(120,50,220,0.08) 100%);
+      background: linear-gradient(135deg, rgba(95,180,229,0.08) 0%, rgba(25,79,144,0.08) 100%);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -398,7 +398,7 @@
     }
     .pkg-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(74, 43, 130, 0.18);
+      box-shadow: 0 12px 40px rgba(25, 79, 144, 0.18);
     }
 
     .pkg-badge {
@@ -512,8 +512,8 @@
     .cta-final {
       padding: 110px 22px;
       background:
-        radial-gradient(ellipse at 50% 100%, rgba(201,165,76,0.14) 0%, transparent 60%),
-        radial-gradient(ellipse at 20% 0%,   rgba(100,40,200,0.10) 0%, transparent 55%),
+        radial-gradient(ellipse at 50% 100%, rgba(95,180,229,0.14) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 0%,   rgba(25,79,144,0.10) 0%, transparent 55%),
         var(--bg);
       text-align: center;
     }
@@ -587,7 +587,7 @@
 <nav>
   <div class="nav-inner">
     <div class="nav-logo">
-      <img src="lifewave-logo.png" alt="LifeWave Independent Brand Partner" style="height:34px;width:auto;display:block;background:#fff;border-radius:6px;padding:4px 10px;" />
+      <img src="lifewave-logo.png" alt="LifeWave Independent Brand Partner" style="height:46px;width:auto;display:block;background:#fff;border-radius:6px;padding:4px 10px;" />
     </div>
     <a href="https://wa.me/64223769983?text=Hi%20Rudolf%2C%20I%27d%20like%20to%20know%20more." target="_blank" rel="noopener" class="nav-wa">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -669,7 +669,7 @@
 
     </div>
 
-    <div style="margin-top: 36px; padding: 34px 32px; background: linear-gradient(135deg, rgba(201,165,76,0.14) 0%, rgba(120,50,220,0.10) 100%); border: 2px solid var(--gold); border-radius: 12px; box-shadow: 0 8px 30px rgba(143,110,31,0.15);">
+    <div style="margin-top: 36px; padding: 34px 32px; background: linear-gradient(135deg, rgba(95,180,229,0.14) 0%, rgba(25,79,144,0.10) 100%); border: 2px solid var(--gold); border-radius: 12px; box-shadow: 0 8px 30px rgba(25,79,144,0.15);">
 
       <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: space-between;">
 
@@ -702,10 +702,10 @@
       <!-- OLD VERSION, direct shop link, replaced 2026-07-13 with a conversation-starter instead so the PC+/Core/Advanced conversation isn't skipped
       <div style="margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
         <div>
-          <p style="font-family: Arial, sans-serif; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #2E5AAC; font-weight: 700; margin-bottom: 4px;">Just want to shop?</p>
+          <p style="font-family: Arial, sans-serif; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #194F90; font-weight: 700; margin-bottom: 4px;">Just want to shop?</p>
           <p style="font-family: Arial, sans-serif; font-size: 14px; color: var(--off-white); margin: 0;">New to this? X39 is the base patch, the one to start on first and feel the benefits before exploring anything else. Go straight to try X39.</p>
         </div>
-        <a href="https://lifewave.com/rudolfvl" target="_blank" rel="noopener" style="display: inline-block; background: #2E5AAC; color: #FFFFFF; border: 1px solid #2E5AAC; padding: 12px 26px; border-radius: 4px; font-family: Arial, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; white-space: nowrap;">
+        <a href="https://lifewave.com/rudolfvl" target="_blank" rel="noopener" style="display: inline-block; background: #194F90; color: #FFFFFF; border: 1px solid #194F90; padding: 12px 26px; border-radius: 4px; font-family: Arial, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; white-space: nowrap;">
           Shop With Me &rarr;
         </a>
       </div>
@@ -713,10 +713,10 @@
 
       <div style="margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
         <div>
-          <p style="font-family: Arial, sans-serif; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #2E5AAC; font-weight: 700; margin-bottom: 4px;">Want to shop with us?</p>
+          <p style="font-family: Arial, sans-serif; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #194F90; font-weight: 700; margin-bottom: 4px;">Want to shop with us?</p>
           <p style="font-family: Arial, sans-serif; font-size: 14px; color: var(--off-white); margin: 0;">Ask me how. There are a few ways to start, PC+ or Core are usually the right first step, and I will help you pick the one that fits your situation, so that you can get your products at wholesale.</p>
         </div>
-        <a href="https://wa.me/64223769983?text=Hi%20Rudolf%2C%20I%27d%20like%20to%20know%20more%20about%20shopping%20with%20you%2C%20PC%2B%2C%20Core%2C%20or%20whatever%20fits%20best." target="_blank" rel="noopener" style="display: inline-flex; align-items:center; gap:8px; background: #2E5AAC; color: #FFFFFF; border: 1px solid #2E5AAC; padding: 12px 26px; border-radius: 4px; font-family: Arial, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; white-space: nowrap;">
+        <a href="https://wa.me/64223769983?text=Hi%20Rudolf%2C%20I%27d%20like%20to%20know%20more%20about%20shopping%20with%20you%2C%20PC%2B%2C%20Core%2C%20or%20whatever%20fits%20best." target="_blank" rel="noopener" style="display: inline-flex; align-items:center; gap:8px; background: #194F90; color: #FFFFFF; border: 1px solid #194F90; padding: 12px 26px; border-radius: 4px; font-family: Arial, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; white-space: nowrap;">
           Ask Me How &rarr;
         </a>
       </div>
@@ -856,7 +856,7 @@
               </div>
             </div>
 
-            <div style="padding: 16px 18px; background: rgba(201,165,76,0.08); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 32px;">
+            <div style="padding: 16px 18px; background: rgba(95,180,229,0.08); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 32px;">
               <p style="font-family: Arial, sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 6px;">Included in the Run</p>
               <p style="font-family: Arial, sans-serif; font-size: 14px; color: var(--off-white); line-height: 1.6; margin: 0;">Get one on one coaching worth over $10,000, completely free, and rub shoulders with the millionaires helping you grow.</p>
             </div>
@@ -948,7 +948,7 @@
   </div>
 </section>
 
-<a href="https://thisisitinfo.com/doctors-videos" target="_blank" rel="noopener" style="display: block; background: #2E5AAC; padding: 36px 22px; text-align: center; text-decoration: none;">
+<a href="https://thisisitinfo.com/doctors-videos" target="_blank" rel="noopener" style="display: block; background: #194F90; padding: 36px 22px; text-align: center; text-decoration: none;">
   <p style="font-family: Arial, sans-serif; font-size: clamp(20px, 3vw, 28px); font-weight: 700; color: #FFFFFF; margin: 0 0 8px; line-height: 1.3;">
     Hear What The Doctors Have To Say &rarr;
   </p>
